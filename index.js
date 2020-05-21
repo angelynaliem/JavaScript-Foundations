@@ -4,8 +4,10 @@
 /* Create variables for principal, interest rate, and years. Assign them the values 200000, 0.05, and 30 respectively. Create another value called name and give it the value of your own name.
 */
 
-
-
+let principal = 200000;
+let interestRate = 0.05;
+let years = 30;
+let name = 'Angelyn Liem';
 
 
 // 🏡 Task 1.5: Simple Math
@@ -16,7 +18,8 @@ Create a variable called `monthlyInterestRate` and give it the value of interest
 Create another variable called `periods` and give it the value of years*12.
 */
 
-
+let monthlyInterestRate = 0.00417;
+let periods = 360;
 
 
 // 🏡 Task 2: Harder Math
@@ -28,6 +31,7 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 
 When your math is correct, monthlyRate will equal 1073.64
 */
+
 
 
 
