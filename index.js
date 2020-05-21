@@ -5,10 +5,13 @@
 */
 
 let principal = 200000;
+console.log(principal);
 let interestRate = 0.05;
+console.log(interestRate);
 let years = 30;
+console.log(years);
 let name = 'Angelyn Liem';
-
+console.log(name);
 
 // 🏡 Task 1.5: Simple Math
 /* To create a monthly mortgage rate calculator, we need to know the number of years in months and the monthly interest rate. 
@@ -18,9 +21,10 @@ Create a variable called `monthlyInterestRate` and give it the value of interest
 Create another variable called `periods` and give it the value of years*12.
 */
 
-let monthlyInterestRate = 0.00417;
-let periods = 360;
-
+let monthlyInterestRate = interestRate/12;
+console.log(monthlyInterestRate);
+let periods = years*12;
+console.log(periods);
 
 // 🏡 Task 2: Harder Math
 /* Create your calculator! Use the formula in the ReadMe to run calculations on your numbers. Save the final value into a variable called monthlyRate.
@@ -32,8 +36,19 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 When your math is correct, monthlyRate will equal 1073.64
 */
 
+let numerator = 1 + monthlyInterestRate; 
+numerator = numerator ** periods;
+numerator = monthlyInterestRate * numerator;
+numerator = principal * numerator;
+console.log(numerator);
 
+let denominator = 1 + monthlyInterestRate;
+denominator = denominator ** periods;
+denominator = denominator - 1;
+console.log(denominator);
 
+let monthlyRate = numerator / denominator;
+console.log(monthlyRate);
 
 
 // 🏡 Task 3: Function
@@ -42,7 +57,11 @@ When your math is correct, monthlyRate will equal 1073.64
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
+function mortgageCalculator() {
+    console.log(name + ", your monthly rate is " + monthlyRate);
+}
 
+mortgageCalculator();
 
 
 
